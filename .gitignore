@@ -1,7 +1,5 @@
 # Variáveis de ambiente locais (NUNCA comitar este arquivo)
 .env
-.env.local
-.env.*.local
 
 # Dependências
 node_modules/
