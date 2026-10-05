@@ -1,0 +1,1 @@
+Harness do agente, as ferramentas que ele tem, a ideia de grafo que ele trabalho sobre, e a estrutura de seu estado.

@@ -1,0 +1,1 @@
+Contexto do agente: o que ele é, qual é o objetivo, contexto atual, e funcionalidades que ele deve implementar
