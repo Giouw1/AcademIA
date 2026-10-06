@@ -1,6 +1,7 @@
 # AcademIA
 AcademIA é um projeto para facilitar o registro de treinos da academia e um visão geral sobre progresso individual.
 Todo o código do aplicativo vai ser gerado por agentes de IA.
+
 **Disclaimer**
 Na verdade, o escopo do projeto mudou. Inicialmente, era um projeto e tinha como objetivo desenvolver o meu spec-driven design. 
 
