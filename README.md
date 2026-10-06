@@ -2,7 +2,7 @@
 AcademIA é um projeto para facilitar o registro de treinos da academia e um visão geral sobre progresso individual.
 Todo o código do aplicativo vai ser gerado por agentes de IA.
 
-**Disclaimer**
+# Disclaimer
 Na verdade, o escopo do projeto mudou. Inicialmente, era um projeto e tinha como objetivo desenvolver o meu spec-driven design. 
 
 Quando comecei a me aventurar nesse padrão de desenvolvimento, fiquei um pouco cético em relação à capacidade do desenvolvimento usando os modelos de IA, apenas escrevendo os specs e o contexto global, achando que seria fácil o modelo se perder em relação ao que deveria fazer, o escopo das tasks sem bagunçar todo a estrutura de desenvolvimento. Não acreditei no desenvolvimento incremental pelo spec driven design.
