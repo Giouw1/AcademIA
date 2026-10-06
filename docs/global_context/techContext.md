@@ -14,4 +14,4 @@ Consult `.env`:
 - `SUPABASE_URL`: Supabase instance URL
 - `SUPABASE_ANON_KEY`: Public key to app client
 - `SUPABASE_SERVICE_ROLE_KEY`: Service key for admin operations
-- `GEMINI_API_KEY` / `OPENAI_API_KEY` / `ANTHROPIC_API_KEY`: LLM model keys
+- `GEMINI_API_KEY`: LLM model keys
