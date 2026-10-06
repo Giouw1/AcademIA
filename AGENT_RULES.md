@@ -1,64 +1,9 @@
-# GUIA DEFINITIVO: REGRAS DO AGENTE (AGENT_RULES.md)
+# Agent Rules
+Agents should respect this document: single source of truth
 
-> **ATENÇÃO: ESTE DOCUMENTO É A FONTE ÚNICA DA VERDADE (SINGLE SOURCE OF TRUTH).**
-> Tanto o assistente desta IDE quanto o motor autônomo local (`run_agent.py` / LangGraph) operam estritamente sob estas regras.
+# Overall Rules
 
----
-
-## 1. Princípios Inegociáveis
-
-1. **Context-First (Memória Persistente)**:
-   - Antes de iniciar qualquer tarefa nova, consulte a pasta [docs/context/](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/).
-   - Verifique sempre [activeContext.md](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/activeContext.md) para saber o foco atual.
-   - Consulte [systemPatterns.md](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/systemPatterns.md) para respeitar padrões arquiteturais adotados.
-
-2. **Desenvolvimento Orientado a Especificações (Spec-Driven)**:
-   - Qualquer funcionalidade nova DEVE ter uma especificação correspondente em `docs/specs/<nome_da_feature>.md`.
-   - O desenvolvimento é incremental: implementa-se apenas o escopo da especificação atual.
-
-3. **Manutenção de Estado & Comunicação**:
-   - Ao concluir uma alteração relevante ou antes de encerrar um ciclo de trabalho, atualize [activeContext.md](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/activeContext.md) e [progress.md](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/progress.md).
-   - Nunca faça suposições silenciosas sobre regras de negócio não especificadas. Pergunte nesses casos.
-
-4. **Qualidade & Consistência de Código**:
-   - Mantenha testes e tipagem estrita sempre atualizados.
-   - Evite misturar múltiplos objetivos em uma única alteração. Trabalhe em passos incrementais e verificáveis.
-   - Após toda tarefa cumprida, **execute os testes com pytest**.
-
-5. **Ciclo único por rodada**
-   - O agente não deve encadear múltiplas features de uma vez sem permissão de continuação  humana
-   - Ao concluir a tarefa atual e passar nos testes, o agente DEVE PARAR IMEDIATAMENTE e apresentar um relatório claro:
-   - - Quais arquivos de código foram criados ou alterados.
-   - - As atualizações feitas em docs/specs/, progress.md e activeContext.md.
-   - - Sugestão do próximo passo para que o usuário aprove antes de continuar.
-6. **Dúvidas e Incoerências (Zero Suposições)**:
-   - Se houver conflito de requisitos, campos não especificados no schema ou comportamentos de tela ambíguos, o agente **NÃO deve deduzir**. Ele deve parar e fazer perguntas de esclarecimento ao usuário.
-
-
----
-
-## 2. Ferramentas Disponíveis para o Agente LangGraph
-
-O motor autônomo opera através das ferramentas em [agent/tools/agent_tools.py](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/agent/tools/agent_tools.py):
-- `read_file`: Leitura de especificações, documentação e arquivos de código.
-- `write_file`: Criação e edição de código e documentação.
-- `list_files`: Mapeamento de diretórios do repositório.
-- `run_pytest`: Execução de testes automatizados com relatório de erros.
-- `run_git_command`: Controle de versão seguro (status, diff, add, commit, branch).
-
----
-
-## 3. Workflow de Execução de Tarefas
-
-1. **Planejamento / Especificação**:
-   - Para novas features, crie ou valide a especificação em `docs/specs/<feature-name>.md` e crie uma branch de trabalho com git.
-2. **Execução Incremental**:
-   - Implemente o código seguindo as convenções de [systemPatterns.md](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/systemPatterns.md).
-3. **Verificação**:
-   - Rode testes com `pytest` (ou tool `run_pytest`). Se falhar, retorne à implementação de código para corrigir.
-4. **Sincronização de Contexto**:
-   - Registre o avanço em [progress.md](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/progress.md) e planeje os próximos passos em [activeContext.md](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/activeContext.md).
-5. **Atualização do repositório de trabalho**:
-   - Salve as atualizações usando comandos git no repositório.
-6. **Atualização do Human In The Loop**
-   - Criar e apresentar o relatório de mudanças ao usuário, e, caso aprovado, trabalhar em uma nova feature: voltar à etapa 1.
+1. **Single cycle working** - After every loop, present the summary of what was done
+2. **Do not infer** - Never infer something when an architectural or technology specification is missing, stop and add that to the summary.
+3. **Work within the scope** - Don't change code that doesn't belong to the scope you are working at.
+4. **Identify every MACRO TASK** -Always tell, for every macro task, from which spec it originated from, and it's order in the to do list.
