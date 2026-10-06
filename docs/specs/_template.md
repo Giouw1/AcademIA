@@ -19,3 +19,5 @@
 ## 5. Critérios de Aceite
 - [ ] Testes passando
 - [ ] Erros de API (ex: rate limit, falha de conexão) tratados graciosamente na UI
+## 6. Finished
+- [] If finished
