@@ -25,6 +25,16 @@
    - Evite misturar múltiplos objetivos em uma única alteração. Trabalhe em passos incrementais e verificáveis.
    - Após toda tarefa cumprida, **execute os testes com pytest**.
 
+5. **Ciclo único por rodada**
+   - O agente não deve encadear múltiplas features de uma vez sem permissão de continuação  humana
+   - Ao concluir a tarefa atual e passar nos testes, o agente DEVE PARAR IMEDIATAMENTE e apresentar um relatório claro:
+   - - Quais arquivos de código foram criados ou alterados.
+   - - As atualizações feitas em docs/specs/, progress.md e activeContext.md.
+   - - Sugestão do próximo passo para que o usuário aprove antes de continuar.
+6. **Dúvidas e Incoerências (Zero Suposições)**:
+   - Se houver conflito de requisitos, campos não especificados no schema ou comportamentos de tela ambíguos, o agente **NÃO deve deduzir**. Ele deve parar e fazer perguntas de esclarecimento ao usuário.
+
+
 ---
 
 ## 2. Ferramentas Disponíveis para o Agente LangGraph
@@ -45,8 +55,10 @@ O motor autônomo opera através das ferramentas em [agent/tools/agent_tools.py]
 2. **Execução Incremental**:
    - Implemente o código seguindo as convenções de [systemPatterns.md](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/systemPatterns.md).
 3. **Verificação**:
-   - Rode testes com `pytest` (ou tool `run_pytest`). Se falhar, corrija até obter sucesso.
+   - Rode testes com `pytest` (ou tool `run_pytest`). Se falhar, retorne à implementação de código para corrigir.
 4. **Sincronização de Contexto**:
    - Registre o avanço em [progress.md](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/progress.md) e planeje os próximos passos em [activeContext.md](file:///c:/Users/nb1_l/Documents/Giovanni/projetos/projetoacad/docs/context/activeContext.md).
 5. **Atualização do repositório de trabalho**:
    - Salve as atualizações usando comandos git no repositório.
+6. **Atualização do Human In The Loop**
+   - Criar e apresentar o relatório de mudanças ao usuário, e, caso aprovado, trabalhar em uma nova feature: voltar à etapa 1.

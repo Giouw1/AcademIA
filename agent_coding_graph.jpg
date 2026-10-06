@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 686.4739166666666 1324.0000000000002" width="686.4739166666666" height="1324.0000000000002" style="--bg:#1F1F1F;--fg:#CCCCCC;--line:#CCCCCC;--accent:#0078D4;--muted:#CCCCCCCC;--surface:#181818;--border:#CCCCCC;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="START" data-to="CheckContext" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="282.97683333333333,76.9 282.97683333333333,124.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckContext" data-to="ExecTask" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Tem tarefa ativa" points="249.06216666666666,161.8 249.06216666666666,633.4000000000001 97.30291666666665,633.4000000000001 97.30291666666665,980.4 148.8313333333333,980.4 148.8313333333333,1004.4" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckContext" data-to="CheckSpecs" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Sem tarefa ativa" points="316.89149999999995,161.8 316.89149999999995,197.8 346.2648333333333,197.8 346.2648333333333,278.1" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckSpecs" data-to="PopulateActive" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Tem Spec pendente" points="315.80816666666664,315 315.80816666666664,645.4000000000001 176.6125833333333,645.4000000000001 176.6125833333333,895.5 230.0268333333333,895.5 230.0268333333333,907.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PopulateActive" data-to="ExecTask" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="272.58649999999994,944.4 272.58649999999994,980.4 257.6626666666666,980.4 257.6626666666666,1004.4" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckSpecs" data-to="CheckProgress" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Todas Specs concluídas" points="376.7215,315 376.7215,351 415.2736666666666,351 415.2736666666666,431.30000000000007" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckProgress" data-to="CreateSpec" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Tem tarefa futura" points="384.56999999999994,468.20000000000005 384.56999999999994,657.4000000000001 283.9265833333333,657.4000000000001 283.9265833333333,810.6 306.8161666666666,810.6 306.8161666666666,822.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CreateSpec" data-to="PopulateActive" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="345.6708333333333,859.5 345.6708333333333,895.5 315.1461666666666,895.5 315.1461666666666,907.5" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckProgress" data-to="CheckBrief" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Sem tarefa futura" points="445.97733333333326,468.20000000000005 445.97733333333326,504.20000000000005 508.40841666666665,504.20000000000005 508.40841666666665,584.5000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckBrief" data-to="AddToProgress" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Faltam funcionalidades" points="470.17125,621.4000000000001 470.17125,657.4000000000001 419.687,657.4000000000001 419.687,737.7" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="AddToProgress" data-to="CreateSpec" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="419.687,774.6 419.687,810.6 384.52549999999997,810.6 384.52549999999997,822.6" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckBrief" data-to="AllDone" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Tudo do Brief concluído" points="546.6455833333333,621.4000000000001 546.6455833333333,657.4000000000001 574.7404166666666,657.4000000000001 574.7404166666666,1004.4" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ExecTask" data-to="SubmitReport" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="203.24699999999999,1041.3 203.24699999999999,1059.3 359.8834166666666,1059.3 359.8834166666666,1077.3" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="AllDone" data-to="SubmitReport" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="574.7404166666666,1041.3 574.7404166666666,1059.3 359.8834166666666,1059.3 359.8834166666666,1077.3" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SubmitReport" data-to="HumanReview" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="359.8834166666666,1114.2 359.8834166666666,1162.2" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="HumanReview" data-to="END" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="359.8834166666666,1199.1000000000001 359.8834166666666,1247.1000000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="CheckContext" data-to="ExecTask" data-label="Tem tarefa ativa">
+  <rect x="51.302916666666654" y="717.0000000000001" width="91.30600000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="96.95591666666667" y="732.1500000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Tem tarefa ativa</text>
+</g>
+<g class="edge-label" data-from="CheckContext" data-to="CheckSpecs" data-label="Sem tarefa ativa">
+  <rect x="300.2648333333333" y="204.8" width="91.30600000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="345.9178333333333" y="219.95000000000002" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Sem tarefa ativa</text>
+</g>
+<g class="edge-label" data-from="CheckSpecs" data-to="PopulateActive" data-label="Tem Spec pendente">
+  <rect x="121.1125833333333" y="749.3000000000001" width="110.31400000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="176.26958333333332" y="764.45" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Tem Spec pendente</text>
+</g>
+<g class="edge-label" data-from="CheckSpecs" data-to="CheckProgress" data-label="Todas Specs concluídas">
+  <rect x="345.77366666666666" y="358" width="138.82600000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="415.18666666666667" y="373.15" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Todas Specs concluídas</text>
+</g>
+<g class="edge-label" data-from="CheckProgress" data-to="CreateSpec" data-label="Tem tarefa futura">
+  <rect x="235.4265833333333" y="664.4000000000001" width="96.05800000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="283.4555833333333" y="679.5500000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Tem tarefa futura</text>
+</g>
+<g class="edge-label" data-from="CheckProgress" data-to="CheckBrief" data-label="Sem tarefa futura">
+  <rect x="459.90841666666665" y="511.20000000000005" width="96.05800000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="507.93741666666665" y="526.35" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Sem tarefa futura</text>
+</g>
+<g class="edge-label" data-from="CheckBrief" data-to="AddToProgress" data-label="Faltam funcionalidades">
+  <rect x="356.687" y="664.4000000000001" width="125.16400000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="419.269" y="679.5500000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Faltam funcionalidades</text>
+</g>
+<g class="edge-label" data-from="CheckBrief" data-to="AllDone" data-label="Tudo do Brief concluído">
+  <rect x="508.2404166666667" y="664.4000000000001" width="132.29200000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="574.3864166666667" y="679.5500000000001" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Tudo do Brief concluído</text>
+</g>
+<g class="node" data-id="START" data-label="START" data-shape="stadium">
+  <rect x="239.77183333333332" y="40" width="86.41" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="282.97683333333333" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">START</text>
+</g>
+<g class="node" data-id="CheckContext" data-label="1. Verificar activeContext.md" data-shape="rectangle">
+  <rect x="181.23283333333333" y="124.9" width="203.48799999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="282.97683333333333" y="143.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">1. Verificar activeContext.md</text>
+</g>
+<g class="node" data-id="ExecTask" data-label="5. Ciclo TDD: Gerar Testes -&gt; Código -&gt; run_tests" data-shape="rectangle">
+  <rect x="40" y="1004.4" width="326.49399999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="203.24699999999999" y="1022.85" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">5. Ciclo TDD: Gerar Testes -&gt; Código -&gt; run_tests</text>
+</g>
+<g class="node" data-id="CheckSpecs" data-label="2. Verificar docs/specs/" data-shape="rectangle">
+  <rect x="254.8948333333333" y="278.1" width="182.73999999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="346.2648333333333" y="296.55" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">2. Verificar docs/specs/</text>
+</g>
+<g class="node" data-id="PopulateActive" data-label="Desdobrar Spec -&gt; activeContext.md" data-shape="rectangle">
+  <rect x="144.9075" y="907.5" width="255.35799999999992" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="272.58649999999994" y="925.95" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Desdobrar Spec -&gt; activeContext.md</text>
+</g>
+<g class="node" data-id="CheckProgress" data-label="3. Verificar progress.md" data-shape="rectangle">
+  <rect x="323.16266666666667" y="431.30000000000007" width="184.22199999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="415.27366666666666" y="449.75000000000006" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">3. Verificar progress.md</text>
+</g>
+<g class="node" data-id="CreateSpec" data-label="Criar nova Spec em docs/specs/" data-shape="rectangle">
+  <rect x="229.1068333333333" y="822.6" width="233.128" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="345.6708333333333" y="841.0500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Criar nova Spec em docs/specs/</text>
+</g>
+<g class="node" data-id="CheckBrief" data-label="4. Comparar com projectbrief.md" data-shape="rectangle">
+  <rect x="393.69691666666665" y="584.5000000000001" width="229.42299999999992" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="508.4084166666666" y="602.9500000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">4. Comparar com projectbrief.md</text>
+</g>
+<g class="node" data-id="AddToProgress" data-label="Adicionar itens ao progress.md" data-shape="rectangle">
+  <rect x="307.1985" y="737.7" width="224.97699999999995" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="419.687" y="756.1500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Adicionar itens ao progress.md</text>
+</g>
+<g class="node" data-id="AllDone" data-label="Projeto Completo!" data-shape="rectangle">
+  <rect x="503.0069166666666" y="1004.4" width="143.467" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="574.7404166666666" y="1022.85" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Projeto Completo!</text>
+</g>
+<g class="node" data-id="SubmitReport" data-label="6. Submeter Relatório para Revisão" data-shape="rectangle">
+  <rect x="235.90941666666663" y="1077.3" width="247.94799999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="359.8834166666666" y="1095.75" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">6. Submeter Relatório para Revisão</text>
+</g>
+<g class="node" data-id="HumanReview" data-label="7. PARAR: Aguardar Aprovação Humana" data-shape="rectangle">
+  <rect x="219.6074166666666" y="1162.2" width="280.552" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="359.8834166666666" y="1180.65" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">7. PARAR: Aguardar Aprovação Humana</text>
+</g>
+<g class="node" data-id="END" data-label="Fim do Ciclo" data-shape="stadium">
+  <rect x="304.08141666666666" y="1247.1000000000001" width="111.604" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="359.8834166666667" y="1265.5500000000002" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Fim do Ciclo</text>
+</g>
+</svg>

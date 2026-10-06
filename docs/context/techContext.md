@@ -5,8 +5,10 @@
 - **Engine de Agentes de IA**: LangGraph + Python (`.venv/`)
 - **Provedores de LLM**: Gemini / OpenAI / Anthropic (via API Keys configuradas)
 - **Frontend / Aplicação Web**: Next.js / React (TypeScript) + Tailwind CSS (a inicializar)
-- **Testes**: Pytest (backend/agente) e Jest/Vitest (frontend)
-
+- **Testes**: Jest/Vitest
+## Futuramente
+- **PWA**
+- **Vercel**: deploy integrado com github.
 ## Variáveis de Ambiente Necessárias
 Consulte `.env.example`:
 - `SUPABASE_URL`: URL da instância do Supabase
