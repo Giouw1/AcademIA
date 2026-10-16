@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+build/
+databases/*.db
+databases/*.db-journal
+databases/*.db-wal
+databases/*.db-shm
+.env*.local
+*.log
+npm-debug.log*
+.DS_Store
