@@ -9,12 +9,12 @@
 -   *Repetitions*: foundamental *exercise* attribute, numerical (VO)
 -   *Rest time*: time between *sets*, numerical (VO)
 -   *Warmup*: if a set is a warmup. (VO)
--   *Muscle Impact*: the amount of stress into the muscle group.
 -   *Workout template*: a plan, consisting on *exercises* and *sets*
 -   *Workout session*: the instance of a workout, with exercises, each with an amount of *sets* done, and on each time of those *sets*, the *weight* and *repetition*. Between two sets, independently of the exercise, there will be a *rest time*
 
 
 # Base workout flow
+-   The user logs in
 -   The user register *workout templates*
 -   The user starts a *workout session*
 -   The user, within a workout session, *starts* an exercise, and *finishes* it.
@@ -36,13 +36,15 @@
 
 -   An user can track development of *weight*, *repetitions*, *rest time*, *sets* done for each *exercise* through *workout sessions*.
 -   The sets marked with warmup should not be counted for those statistics
--   An user can track the *impact* over time (daily, weekly, monthly) on each *muscle group*, through workout sessions. The *impact* will be calculated using the *weight* and *sets* for an exercise. You can improve the base formula, but it goes like Impact (Volume) = Sets × Repetitions × Weight × Exercise_Muscle_Multiplier (TBD). You can search yourself for what is the multiplier for each exercise.
-
     QoL additions for the app.
 -   Every *exercise* has its own image representation, showing the targeted muscle groups, and how much they are targeted.
 -   Every workout template represents the expected muscle groups targeted
 
 ## Technical Execution Rules
-Do not begin generating code based purely on this overview. To understand how to implement these domain rules, you MUST read and strictly adhere to the constraints defined in the following specification files:
-1. `.agents/architecture.md` (for folder structure, Clean Architecture boundaries, and dependency injection rules)
-2. `.agents/stack.md` (for the specific implementation details)
+*   Do not begin generating code based purely on this overview. To understand how to implement these domain rules, you MUST read and strictly adhere to the constraints defined in the following specification files:
+        1. `.agents/architecture.md` (for folder structure, Clean Architecture boundaries, and dependency injection rules)
+        2. `.agents/stack.md` (for the specific implementation details)
+
+*   Always write down the tasks into a tasks.md file under .agents, and mark the checked [x] or unchecked [] whether finished or not 
+*   Always write down the implementation plan into implementation.md under .agents, and mark the checked [x] or unchecked []
+*   Present the execution plans for each task before actually implementing them, there is no need to ask for permission for every code write, but for every conceptual task execution.
