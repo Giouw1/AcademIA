@@ -12,3 +12,5 @@ There are four edge cases that need to be checked
 
 
 Implement Auth and put it into supabase
+Develop better data retrieval (less general)
+Muscle impact

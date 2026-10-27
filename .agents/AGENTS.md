@@ -37,8 +37,7 @@
 -   An user can track development of *weight*, *repetitions*, *rest time*, *sets* done for each *exercise* through *workout sessions*.
 -   The sets marked with warmup should not be counted for those statistics
     QoL additions for the app.
--   Every *exercise* has its own image representation, showing the targeted muscle groups, and how much they are targeted.
--   Every workout template represents the expected muscle groups targeted
+-   Every *exercise* has its own placeholder image representation (muscle group impact is not handled for now).
 
 ## Technical Execution Rules
 *   Do not begin generating code based purely on this overview. To understand how to implement these domain rules, you MUST read and strictly adhere to the constraints defined in the following specification files:

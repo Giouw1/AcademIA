@@ -1,8 +1,10 @@
 ## Tech Stack
 # Framework and code languages
--   *Frontend*: Next JS / React (Typescript) 
-- **Asset Storage:** All static exercise images must reside locally in the `component/exercises` directory.
--   *Backend*: Next JS: RESTful API's. *Don't* do Server Actions. Validata data with *Zod*
+-   *Language*: Typescript
+-   *Frontend*: Next JS / React, with TailwindCSS
+- **Asset Storage:** Static exercise images will reside locally in the `public/exercises` directory (placeholders only for now).
+-   *Backend*: Next JS: RESTful API's, based on App Router and Route handlers. Validate data with *Zod*
+-   *Database and ORM*: Use Drizzle ORM to handle the SQL Queries
 -   *Tests*: Vitest
 # Database
 -   *DBMS*: SQLite
